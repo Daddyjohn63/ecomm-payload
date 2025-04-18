@@ -1,15 +1,15 @@
-import configPromise from '@payload-config'
-import { getPayload } from 'payload'
+import configPromise from '@payload-config';
+import { getPayload } from 'payload';
 
 export const GET = async () => {
   const payload = await getPayload({
-    config: configPromise,
-  })
+    config: configPromise
+  });
 
   const data = await payload.find({
-    collection: "categories",
-  })
+    collection: 'categories'
+  });
 
-  return Response.json(data)
-}
+  return Response.json(data);
+};
 // https://localhost:3000/my-route
